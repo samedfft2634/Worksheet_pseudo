@@ -1,0 +1,297 @@
+* {
+	/* padding: 0;
+    margin: 0; */
+	font-family: "Martian Mono", monospace;
+	font-family: "Montserrat Alternates", sans-serif;
+}
+
+/*! if spacae between ul and .languages, system try to find .languages class in ul's items */
+ul.languages {
+	/*! set background-color to see where we are ! Border can be usefull in this case */
+	background-color: gray;
+
+	/*! open comments to see types  */
+	list-style-type: circle;
+	/* list-style-type: square; */
+	/* list-style-type: none; */
+	/* list-style-type: lower-latin; */
+	/* list-style-type: georgian; */
+	/* list-style-type: disc; */
+
+	/*~ indentation  */
+	/* list-style-position: inside; */
+	list-style-position: outside;
+
+	/*+ adding image with svg extension or icon  */
+	list-style-image: url(./igloo-solid.svg);
+
+	/*! we have to add padding if margin and padding defined 0 in universal selector  */
+	padding: 20px;
+
+	border-radius: 10px 0px 5px 0px;
+	margin: 5px;
+	width: 18rem;
+}
+
+h2 {
+	color: blueviolet;
+	width: 10rem;
+	background-color: lightgray;
+	border-radius: 10px 0px 10px 0px;
+	margin: 5px;
+	letter-spacing: 2px;
+}
+
+h2.sh {
+	width: 19rem;
+}
+
+h2 i {
+	color: lightcoral;
+	margin: 5px;
+}
+.fa-desktop {
+	color: lightcoral;
+}
+
+ul.languages li {
+	background-color: lightgreen;
+	margin: 5px;
+	width: 250px;
+	border-radius: 10px;
+	padding-left: 20px;
+	border: 1px solid red;
+
+	border-left: 5px solid lightgray;
+}
+
+ul.languages li:hover {
+	background-color: lightgray;
+	color: blueviolet;
+	font-size: 20px;
+	cursor: pointer;
+	border: 1px solid red;
+}
+ul.languages li:active {
+	background-color: red;
+}
+
+svg {
+	height: 20px;
+	width: 20px;
+}
+
+/*!================ PSEUDO CLASSES =========== */
+
+ul.pseudo {
+	text-transform: capitalize;
+}
+
+ul.pseudo li {
+	/* border: 2px solid black; */
+	width: 7rem;
+	text-align: center;
+	letter-spacing: 2px;
+	margin: 2px;
+	padding: 5px;
+	border-radius: 5px;
+	font-weight: 900;
+}
+ul.pseudo li:first-child {
+	color: red;
+}
+
+ul.pseudo li:last-child {
+	color: blue;
+}
+ul.pseudo li:nth-child(3) {
+	color: orangered;
+	background-color: crimson;
+}
+
+ul.pseudo li:nth-child(odd) {
+	background-color: lightgray;
+}
+
+ul.pseudo li:nth-child(even) {
+	background-color: lightseagreen;
+}
+
+/* ul.pseudo li:not(odd){
+    background-color: blue;
+} */
+ul.pseudo li:hover {
+	background-color: darkgoldenrod;
+	color: rgb(17, 255, 0);
+}
+
+ul.pseudo li:active {
+	background-color: mediumvioletred;
+	color: #ee82e4;
+}
+
+input:focus {
+	background-color: rgba(255, 99, 71, 0.721);
+	color: white;
+	border: 1px dashed red;
+	outline: none;
+}
+
+/*!================ LINK PSEUDO CLASSES =========== */
+
+h2.th2 {
+	width: 6rem;
+}
+
+/* for general using */
+/* 
+nav.link a{
+    color: darkcyan;
+    text-decoration: none;
+}
+nav.link a:hover {
+    color: blue;
+    text-decoration: underline;
+} */
+
+/* for specific usage */
+nav.link a:link {
+	color: red;
+}
+nav.link a:visited {
+	color: blue;
+}
+
+nav.link a:hover {
+	color: rgb(142, 90, 6);
+}
+nav.link a:active {
+	color: lightseagreen;
+}
+
+nav.cw a {
+	text-decoration: none;
+	border: 2px solid darkorange;
+	padding: 5px;
+	margin: 10px;
+	color: darkorange;
+	border-radius: 10px;
+}
+
+nav.cw a:hover {
+	background-color: lightgray;
+	color: white;
+}
+
+nav.cw a i {
+	margin: 5px;
+
+	/* in inline elements, padding does not effect on top and bottom */
+	padding: 1px;
+	font-size: 1.3rem;
+}
+
+nav.cw a:hover i {
+	color: red;
+}
+
+span {
+	background-color: gray;
+
+	/* inline elements can not take margin of the outside */
+	margin: 10px;
+	margin-top: 50px;
+
+	/* if they are displaying like block  they will take margin and margin top
+    display: block; */
+
+	/* now you can see the margin  */
+	display: inline-block;
+	padding: 20px;
+	height: 30px;
+	width: 7rem;
+}
+
+#par1 {
+	/* if we give inline to p tag, we can not see the width value  */
+	/* display: inline; */
+	background-color: brown;
+	color: #fff;
+	/* width: 100%; */
+
+	/* now we can see  */
+	display: inline-block;
+
+	/*! open width comment when inline block is open to see the different */
+	/* width: 100%; */
+}
+
+/*!================ PSEUDO ELEMENTS =========== */
+
+h2.fh2 {
+	width: 18rem;
+}
+h2.bae {
+	width: 25rem;
+}
+p.par2 {
+	text-indent: 2rem;
+}
+p.par2::first-line {
+	color: red;
+
+	font-size: 1.5rem;
+	font-weight: 200;
+	font-variant: small-caps;
+}
+
+ul.before-after {
+	list-style-type: none;
+}
+
+ul.before-after li {
+	background-color: lightsalmon;
+	width: 20%;
+	margin: 0.5rem;
+	border-radius: 10px;
+}
+ul.before-after li:hover {
+	background-color: skyblue;
+}
+
+ul.before-after li::before {
+	content: "🚗";
+	margin: 10px;
+}
+
+ul.before-after li:hover::after {
+	content: "✅";
+}
+
+ul.before-after li:nth-child(2)::before {
+	content: "🚲";
+}
+
+ul.before-after li:nth-child(2)::after {
+	content: "🚲";
+	margin-left: 10px;
+}
+
+ul.before-after li:nth-child(2):active::after {
+	content: "✅";
+}
+ul.before-after li:nth-child(3)::before {
+	content: "🚀";
+}
+ul.before-after li:nth-child(4)::before {
+	content: "🛸";
+}
+ul.before-after li:nth-child(5)::before {
+	content: "🏎";
+}
+ul.before-after li:nth-child(5)::after {
+	content: "🏎";
+}
+ul.before-after li:nth-child(5):active::after {
+	content: "✅";
+}
